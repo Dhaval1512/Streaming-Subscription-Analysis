@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Platforms Pricing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>WATCHIFY</h1>
+        </div>
+        <h1>Streaming Plans</h1>
+        <div class="header-actions">
+            <input type="text" placeholder="Search plans..." class="search-bar" id="search-input">
+            <button class="explore-btn" onclick="toggleExplorePopup()">Explore</button>
+        </div>
+    </header>
+
+    <!-- Tab bar -->
+    <div class="tabs">
+        <button class="tab active" onclick="renderPlans('Disney')">Disney Hotstar</button>
+        <button class="tab" onclick="renderPlans('Netflix')">Netflix</button>
+        <button class="tab" onclick="renderPlans('Prime')">Prime Videos</button>
+        <button class="tab" onclick="renderPlans('Rakuten')">Rakuten</button>
+        <button class="tab" onclick="renderPlans('Paramount')">Paramount+</button>
+    </div>
+
+    <!-- Dynamic content -->
+    <div id="content" class="plans-container">
+        <p>Loading plans...</p>
+    </div>
+
+    <!-- Explore Popup -->
+    <div id="explorePopup" class="explore-popup">
+        <ul>
+            <li>Best Plan</li>
+            <li onclick="navigateToWebCrawler()">Web Crawler</li>
+            <li onclick="redirectToTextExtractor()">Text Extractor</li>
+            <li onclick="redirectToPageRanking()">Page Ranking</li>
+            <li onclick="redirectToFrequencyCount()">Frequency Count</li>
+            <li onclick="navigateToInvertedIndex()">Inverted Index</li>
+        </ul>
+    </div>
+
+
+    <script>
+        function toggleExplorePopup() {
+            const popup = document.getElementById('explorePopup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function redirectToPageRanking() {
+            window.location.href = 'PageRank.html';
+        }
+
+        function navigateToWebCrawler() {
+            window.location.href = "WebCrawler.html";
+        }
+
+        function navigateToInvertedIndex() {
+            window.location.href = "invertedIndex.html";
+        }
+
+        function redirectToFrequencyCount() {
+            window.location.href = "FrequencyCount.html";
+        }
+
+        function redirectToSearchFrequency() {
+            window.location.href = "SearchFrequency.html";  // Redirects to the Search Frequency page
+        }
+
+        function redirectToTextExtractor() {
+            window.location.href = "TextExtractor.html"
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
